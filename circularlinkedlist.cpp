@@ -26,7 +26,7 @@ class CircularLinkedList {
   CircularLinkedList() {
     head = NULL;
   }
-
+  // 1. CHeck if node exists using key value
   
   Node * nodeExists(int k) {
 
@@ -48,7 +48,7 @@ class CircularLinkedList {
 
     
   }
-
+  // 2. Append a node to the list - Attach node at the  end.
   
   void appendNode(Node * new_node) {
     if (nodeExists(new_node -> key) != NULL) {
@@ -73,6 +73,7 @@ class CircularLinkedList {
     }
 
   }
+  // 3. Prepend Node - Attach a node at the start
   
   void prependNode(Node * new_node) {
     if (nodeExists(new_node -> key) != NULL) {
@@ -99,7 +100,7 @@ class CircularLinkedList {
 
     }
   }
-
+  // 4. Insert a Node after a particular node in the list
   
   void insertNodeAfter(int k, Node * new_node) {
     Node * ptr = nodeExists(k);
@@ -125,7 +126,7 @@ class CircularLinkedList {
       }
     }
   }
-
+  // 5. Delete node by unique key
   
   void deleteNodeByKey(int k) {
     Node * ptr = nodeExists(k);
@@ -169,6 +170,7 @@ class CircularLinkedList {
     }
 
   }
+   // 6th update node
   
   void updateNodeByKey(int k, int new_data) {
 
@@ -181,7 +183,7 @@ class CircularLinkedList {
     }
 
   }
-
+  // 7th printing
 
   void printList() {
     if (head == NULL) {
@@ -207,6 +209,8 @@ int main() {
   CircularLinkedList obj;
   int option;
   int key1, k1, data1;
+  //Run all operation..
+  
   do {
     cout << "\nWhat operation do you want to perform? Select Option number. Enter 0 to exit." << endl;
     cout << "1. appendNode()" << endl;
